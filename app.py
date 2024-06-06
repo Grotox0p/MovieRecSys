@@ -26,7 +26,7 @@ def recommend(movie):
 
 st.header('Akhil Recommends You')
 movies = pickle.load(open('movie_list.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+similarity = pickle.load(open('similar.pkl', 'rb'))
 
 
 movie_list = movies['title'].values
