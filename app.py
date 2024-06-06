@@ -33,6 +33,12 @@ try:
         similarity = pickle.load(f)
 except (pickle.UnpicklingError, IOError) as e:
     print("Error loading pickled data:", e)
+    similarity = None  # Assigning a default value to similarity in case loading fails
+
+if similarity is None:
+    st.error("Failed to load similarity data. Please check if the file exists.")
+    st.stop()  # Stop further execution if similarity data is not loaded
+
 
 
 movie_list = movies['title'].values
