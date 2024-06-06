@@ -26,7 +26,13 @@ def recommend(movie):
 
 st.header('Akhil Recommends You')
 movies = pickle.load(open('movie_list.pkl', 'rb'))
-similarity = pickle.load(open('simi.pkl', 'rb'))
+
+
+try:
+    with open('simi.pkl', 'rb') as f:
+        similarity = pickle.load(f)
+except (pickle.UnpicklingError, IOError) as e:
+    print("Error loading pickled data:", e)
 
 
 movie_list = movies['title'].values
