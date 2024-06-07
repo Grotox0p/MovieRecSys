@@ -29,7 +29,7 @@ movies = pickle.load(open('movie_list.pkl', 'rb'))
 
 
 try:
-    with open('simi.pkl', 'rb') as f:
+    with open('single.pkl', 'rb') as f:
         similarity = pickle.load(f)
 except (pickle.UnpicklingError, IOError) as e:
     print("Error loading pickled data:", e)
