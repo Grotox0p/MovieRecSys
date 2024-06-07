@@ -25,7 +25,7 @@ def recommend(movie):
 
 
 st.header('Akhil Recommends You')
-movies = pickle.load(open('movie_list.pkl', 'rb'))
+movies = pickle.load(open('movie_list2.pkl', 'rb'))
 
 
 try:
